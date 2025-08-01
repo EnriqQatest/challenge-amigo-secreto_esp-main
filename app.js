@@ -1,11 +1,11 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
 //Variables del proyecto
-   let amigo = [];
+   let amigo = []; /* Array */
 
    //Funcion
    function agregarAmigo(){
-      let inputAmigo = document.getElementById("amigo");/*Conexion con el HTML por medion del document*/
+      let inputAmigo = document.getElementById("amigo");/*Conexion con el HTML por medio del document.*/
       let nombreAmigo = inputAmigo.value;
 
       //Condicional
@@ -16,10 +16,25 @@
       amigo.push(nombreAmigo);/*Seguido se llama a la lista de amigos */ 
       /*console.log(amigo);*/
       inputAmigo.focus();
+      generarAmigos();/*llamar a la funcion generarAmigos para que muestre lista de amigos*/ 
  }
 
-    function generarAmigos(){
+   function generarAmigos(){
       let listaAmigos = document.getElementById("listaAmigos");
-      listaAmigos.innerHTML = "";
+      listaAmigos.innerHTML = "";/*Limpiar lista de amigos*/ 
+      /*console.log(amigo);*/
 
+      //Bucle para recorrer el array (indice)=i
+      for(let i = 0 < amigo.length; i++) /* Contador */ {
+         let item = document.createElement("li");
+         item.textContent = amigo[i];
+         listaAmigos.appendChild(item);/*agregar elemento a la lista*/
+
+
+      }
+
+   }
+
+   function sortearAmigo(){
+   
    }
