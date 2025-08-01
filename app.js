@@ -5,7 +5,7 @@
 
    //Funcion
    function agregarAmigo(){
-      let inputAmigo = document.getElementById("amigo");
+      let inputAmigo = document.getElementById("amigo");/*Conexion con el HTML por medion del document*/
       let nombreAmigo = inputAmigo.value;
 
       //Condicional
@@ -14,5 +14,12 @@
          return
       }
       amigo.push(nombreAmigo);/*Seguido se llama a la lista de amigos */ 
-      console.log(amigo);     
+      /*console.log(amigo);*/
+      inputAmigo.focus();
  }
+
+    function generarAmigos(){
+      let listaAmigos = document.getElementById("listaAmigos");
+      listaAmigos.innerHTML = "";
+
+   }
