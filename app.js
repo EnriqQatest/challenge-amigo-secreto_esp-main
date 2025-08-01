@@ -9,8 +9,10 @@
       let nombreAmigo = inputAmigo.value;
 
       //Condicional
-      If (!amigo) {
+      if (!nombreAmigo) {
          alert ("Debes ingresar un nombre");
          return
       }
+      amigo.push(nombreAmigo);
+      console.log(amigo);     
  }
