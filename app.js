@@ -16,6 +16,15 @@
       if (amigo.includes(nombreAmigo)) {
          alert("Nombre ya fue ingresado");/* Condicional para que no sea ingresado el mismo nombre */
       }
+      // Valida que solo contenga letras
+
+       let soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+      if (!soloLetras.test(nombreAmigo)) {
+      alert("El nombre solo puede contener letras");
+      return;
+      }
+   
+
 
       amigo.push(nombreAmigo);/*Seguido se llama a la lista de amigos */ 
       /*console.log(amigo);*/
@@ -34,11 +43,9 @@
          let item = document.createElement("li");
          item.textContent = amigo[i];
          listaAmigos.appendChild(item);/*agregar elemento a la lista*/
-
-
+         
       }
-
-   }
+      }
 
    function sortearAmigo() {
       if (amigo.length === 0) {
