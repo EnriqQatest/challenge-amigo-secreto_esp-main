@@ -13,6 +13,10 @@
          alert ("Debes ingresar un nombre");
          return
       }
+      if (amigo.includes(nombreAmigo)) {
+         alert("Nombre ya fue ingresado");/* Condicional para que no sea ingresado el mismo nombre */
+      }
+
       amigo.push(nombreAmigo);/*Seguido se llama a la lista de amigos */ 
       /*console.log(amigo);*/
       inputAmigo.value = ""; // Limpia el input después de agregar
@@ -50,6 +54,7 @@
    
       let limpiarLista = document.getElementById("listaAmigos");
       limpiarLista.innerHTML = (""); // Limpia la lista de amigos despues de sortear
+
 
    
    }
