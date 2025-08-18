@@ -13,17 +13,22 @@
          alert ("Debes ingresar un nombre");
          return
       }
+      if (amigo.some(n => n.toLowerCase() === nombreAmigo.toLowerCase())) {
+         alert("Nombre ya fue ingresado");
+         return;/**Condicionale para que el mismo nombre no sea ingresado */
+      }
       if (amigo.includes(nombreAmigo)) {
          alert("Nombre ya fue ingresado");/* Condicional para que no sea ingresado el mismo nombre */
+         return;
       }
-      // Valida que solo contenga letras
 
+      // Valida que solo contenga letras
+      
        let soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
       if (!soloLetras.test(nombreAmigo)) {
       alert("El nombre solo puede contener letras");
       return;
       }
-   
 
 
       amigo.push(nombreAmigo);/*Seguido se llama a la lista de amigos */ 
@@ -43,7 +48,7 @@
          let item = document.createElement("li");
          item.textContent = amigo[i];
          listaAmigos.appendChild(item);/*agregar elemento a la lista*/
-         
+
       }
       }
 
@@ -52,6 +57,10 @@
          alert("No hay amigos para sortear");
          return;
       } 
+      if (amigo.length < 3){
+         alert("Debe haber al menos 3 amigos para sortear");
+         return;
+      }
 
       // Variable para almacenar el amigo sorteado
       let amigoSorteado = amigo[Math.floor(Math.random() * amigo.length)];
