@@ -21,7 +21,6 @@ Incluye validaciones para evitar nombres duplicados, nombres vacíos, caracteres
 ## 🖥️ Vista previa
 https://drive.google.com/file/d/1R4BGUq6Qmm5NF_hRKMY3KTZf8ruVEecA/view?usp=sharing
 
-[Demo del proyecto = http://127.0.0.1:5500/index.html
 
 ---
 
